@@ -50,15 +50,26 @@ const teamInfo = [
         image: "barbara-ramos-graphic-designer.jpg"
     }  
 
-]
+];
 
+const infoElement = document.querySelector("ul");
+
+// Stampare in console le info di ogni membro del team
 for (let i = 0; i < teamInfo.length; i++) {
 
     const actualObject = teamInfo[i];
 
+    let showInfo = ""
+
     for (let key in actualObject) {
 
-        console.log(key + ": " + actualObject[key])
+        // console.log(key + ": " + actualObject[key]);
+
+        showInfo += `${key}: ${actualObject[key]}, `;
     }
+
+    infoElement.innerHTML += `<li>${showInfo}</li>`;
+    console.log(infoElement)
     
 }
+
