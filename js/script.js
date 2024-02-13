@@ -64,6 +64,13 @@ for (let i = 0; i < teamInfo.length; i++) {
     const memberImg = cardMember.querySelector(".card-img-top");
     memberImg.src = actualObject.image;
 
+// Cambio il titolo delle card con il nome di ogni membro
+    const memberName = cardMember.querySelector(".card-title");
+    memberName.innerText = actualObject.name;
+
+// Inserisco il ruolo di ogni membro nelle card
+    const memberRole = cardMember.querySelector(".card-text");
+    memberRole.innerText = actualObject.role;
     
 }
 
