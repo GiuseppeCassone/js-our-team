@@ -52,24 +52,18 @@ const teamInfo = [
 
 ];
 
-const infoElement = document.querySelector("ul");
+const infoElement = document.querySelectorAll(".card");
 
-// Stampare in console le info di ogni membro del team
+// Itero attraverso teamInfo e inserisco il contenuto nelle card 
 for (let i = 0; i < teamInfo.length; i++) {
 
     const actualObject = teamInfo[i];
+    const cardMember = infoElement[i];
 
-    let showInfo = ""
+// Inserisco le immagini nelle card
+    const memberImg = cardMember.querySelector(".card-img-top");
+    memberImg.src = actualObject.image;
 
-    for (let key in actualObject) {
-
-        // console.log(key + ": " + actualObject[key]);
-
-        showInfo += `${key}: ${actualObject[key]}, `;
-    }
-
-    infoElement.innerHTML += `<li>${showInfo}</li>`;
-    console.log(infoElement)
     
 }
 
