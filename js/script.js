@@ -51,3 +51,14 @@ const teamInfo = [
     }  
 
 ]
+
+for (let i = 0; i < teamInfo.length; i++) {
+
+    const actualObject = teamInfo[i];
+
+    for (let key in actualObject) {
+
+        console.log(key + ": " + actualObject[key])
+    }
+    
+}
