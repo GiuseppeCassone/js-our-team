@@ -71,6 +71,10 @@ for (let i = 0; i < teamInfo.length; i++) {
 // Inserisco il ruolo di ogni membro nelle card
     const memberRole = cardMember.querySelector(".card-text");
     memberRole.innerText = actualObject.role;
+
+    // for (let key in actualObject) {
+    //     console.log(`${key}: ${actualObject[key]}`);
+    // }
     
 }
 
